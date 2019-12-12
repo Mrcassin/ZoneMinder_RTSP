@@ -14,8 +14,8 @@ WiFiMulti wifiMulti;
 #include "OV2640.h"
 #include "CRtspSession.h"
 
-const char *ssid = "AC/DC";
-const char *password = "RoJiVeMa144";
+const char *ssid = "SSPUOpava";
+const char *password = "";
 
 #define USEBOARD_AITHINKER
 
@@ -30,7 +30,7 @@ WiFiClient serverClients[MAX_SRV_CLIENTS];
 
 int err;
 String streamchar = "";
-int delkaStreamu = 0;
+
 
 //email-trigger
 //const char * DEVID = "@gmail.com";
@@ -78,7 +78,7 @@ static void IRAM_ATTR detectsMovement(void *arg)
 {
     Serial.println("MOTION DETECTED!!!!");
     streamchar = "test";
-    delkaStreamu = streamchar.length();
+
 }
 
 void handle_jpg_stream(void)
@@ -106,6 +106,7 @@ void handle_jpg_stream(void)
 
 void handle_alert_stream(void)
 {
+
     WiFiClient client = server.client();
     String response = "HTTP/1.1 200 OK\r\n";
     response += "Content-Type: multipart/x-mixed-replace; boundary=frame\r\n\r\n";
@@ -113,13 +114,19 @@ void handle_alert_stream(void)
 
     while (1)
     {
+        String lStream = streamchar;
+        streamchar = "";
+        int delkaStreamu= lStream.length();
+        
         if (!client.connected())
             break;
-        response = "--frame\r\n";
-        response += "Content-Type: aplication/octet-stream\r\n\r\n";
-        server.sendContent(response);
-        client.write(streamchar.c_str(), delkaStreamu);
-        server.sendContent("\r\n");
+        client.write(lStream.c_str(), delkaStreamu);
+        /*if (delkaStreamu > 0)
+        {
+            streamchar = "";
+            delkaStreamu = streamchar.length();
+        }
+*/
         if (!client.connected())
             break;
     }
