@@ -14,12 +14,11 @@ Závěrečná práce- ZoneMinder kamera, externí pir trigger
   - [x] kamera (http, rtps stream)
   - [x] komunikace kamery s zoneminder serverem
   - [x] vyhodnocování ze senzorů pohybu + upozornění
-  - [ ] upozoznění emailem (PushingBox)
-  - [ ] ZM script na trigger z pir sen. 
+  - [x] ZM script na trigger z pir sen. 
 - prosinec -> leden
   - [ ] pájení
   - [ ] krabička
-  - [ ] domumentace
+  - [x] domumentace
   
 ## Možné vylepšení do budoucna
 - vyvinutí mobilní aplikace
