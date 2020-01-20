@@ -1,6 +1,8 @@
 # SmartIN
 Martin Šimkovský, IT4
 Závěrečná práce- ZoneMinder kamera, externí pir trigger
+##Prezentace
+https://prezi.com/view/EC7Q8tTAdIHZmPiKadGc/
 
 ## Časový harmonogram
 - září -> 1 pol. října
