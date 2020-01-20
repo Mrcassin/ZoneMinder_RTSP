@@ -1,7 +1,7 @@
 # SmartIN
 Martin Šimkovský, IT4
 Závěrečná práce- ZoneMinder kamera, externí pir trigger
-##Prezentace
+## Prezentace
 https://prezi.com/view/EC7Q8tTAdIHZmPiKadGc/
 
 ## Časový harmonogram
@@ -26,6 +26,8 @@ https://prezi.com/view/EC7Q8tTAdIHZmPiKadGc/
 - vyvinutí mobilní aplikace
 - přidání dalších čidel (okna, dveře)
 - meteo stanice v centrální jednotce (MQTT)
+- wifi manager nebo homie
+- noční přísvit
 
 Kódy ke zkoušce: 
 - [x] https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/
